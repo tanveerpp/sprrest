@@ -17,8 +17,8 @@ public class MyService {
 	{
 		List<User> al=this.repo.findAll();
 		template=this.app.getRestTemplate();
-		List<Product> d=template.getForObject("http://productservice/product", List.class);
-		//List<Product> d=template.getForObject("https://heked68527.pythonanywhere.com/product/", List.class);
+		//List<Product> d=template.getForObject("http://productservice/product", List.class);
+		List<Product> d=template.getForObject("https://heked68527.pythonanywhere.com/product/", List.class);
 		al.get(0).setProducts(d);
 		//repo.save(al.get(0));
 		return al;
